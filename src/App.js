@@ -1,6 +1,7 @@
 import './App.css';
 import { getAuth } from 'firebase/auth'
 import app from './firebase/firebase.init';
+import RegisterReactBoots from './components/RegisterReactBoots/RegisterReactBoots';
 
 const auth = getAuth(app)
 function App() {
@@ -19,14 +20,11 @@ function App() {
   }
 
   return (
-    <div className="App">
-     <form onSubmit={handleRegister}>
-      <input onBlur={handleEmailBlur} type="email" name="email" id="" placeholder='Your Email'  />
-      <br />
-      <input onBlur={handlePasswordBlur} type="password" name="password" id="" placeholder='Your Password' />
-      <br />
-      <button type="submit">Register</button>
-     </form>
+    <div className="">
+
+      <RegisterReactBoots></RegisterReactBoots>
+
+    
     </div>
   );
 }
