@@ -9,15 +9,21 @@ function App() {
     event.preventDefault()
     const email = event.target.email.value
     const password = event.target.password.value
-    console.log(event.target.email.value)
+    console.log(email, password)
+  }
+  const handleEmailChange = (event) =>{
+    console.log(event.target.value)
+  }
+  const handlePasswordChange = (event) =>{
+    console.log(event.target.value)
   }
 
   return (
     <div className="App">
      <form onSubmit={handleRegister}>
-      <input type="email" name="email" id="" placeholder='Your Email'  />
+      <input onChange={handleEmailChange} type="email" name="email" id="" placeholder='Your Email'  />
       <br />
-      <input type="password" name="password" id="" placeholder='Your Password' />
+      <input onChange={handlePasswordChange} type="password" name="password" id="" placeholder='Your Password' />
       <br />
       <button type="submit">Register</button>
      </form>
